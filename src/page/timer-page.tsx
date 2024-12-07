@@ -3,35 +3,20 @@ import { useEffect } from 'react'
 import { Layout } from '../components/layout/layout'
 
 const TimerPage = () => {
-  const [time, setTime] = useState(0)
-
   const handleStart = () => {
-    setTime(time + 1)
+    console.log('start')
   }
-
-  const handleStop = () => {
-    setTime(0)
-  }
-
-  const handleReset = () => {
-    setTime(0)
-  }
-
-  const handlePause = () => {
-    setTime(time)
-  }
-
-  useEffect(() => {
-    if (time > 0) {
-      setTimeout(() => {
-        setTime(time + 1)
-      }, 1000)
-    }
-  }, [time])
 
   return (
     <Layout>
-      <h1>timer</h1>
+      <div className="flex justify-center items-center h-full">
+        <button
+          className="border-2 border-gray-black py-2 px-12 rounded-full font-mono cursor-pointer hover:bg-gray-300"
+          onClick={handleStart}
+        >
+          Start
+        </button>
+      </div>
     </Layout>
   )
 }
