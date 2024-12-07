@@ -1,50 +1,22 @@
-# React + TypeScript + Vite
+Timer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+프로젝트 개요
 
-Currently, two official plugins are available:
+Timer 앱은 사용자에게 시간을 로드하고 표시하는 간단한 UI/UX를 제공하는 타이머 애플리케이션입니다. 아래 요구 사항과 디자인 지침에 따라 개발되었습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+기술 스택 및 개발 환경
 
-## Expanding the ESLint configuration
+    •	프레임워크: React, Next.js
+    •	언어: TypeScript
+    •	스타일링: CSS-in-JS (Emotion 또는 Styled-components 추천)
+    •	상태 관리: React Context 또는 Zustand
+    •	애니메이션: Framer Motion 또는 CSS 애니메이션
+    •	API 관리: Axios 또는 Fetch API
+    •	테스트: Jest 및 React Testing Library
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+요구 사항 요약
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    1.	Start 버튼을 눌러 시간 데이터를 로드합니다.
+    2.	로딩 상태를 적절히 표시하며, 최소 2초 이상 로딩 시간을 구현합니다.
+    3.	앱 또는 탭을 최대 5초 동안 이탈하더라도 시간 흐름이 유지됩니다.
+    4.	사용자가 더 나은 경험을 할 수 있도록 필요한 UI/UX 추가 개선 사항을 반영합니다.
